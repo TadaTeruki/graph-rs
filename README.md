@@ -29,7 +29,7 @@ A library for providing graph structures implemented as adjacency lists. It cont
 This is a basic example of how to use the `UndirectedGraph` and `DirectedGraph`:
 
 ```rust
-use graph::*;
+use graph_rs::*;
 
 // Create an undirected graph
 let mut undirected_graph = UndirectedGraph::new(5);

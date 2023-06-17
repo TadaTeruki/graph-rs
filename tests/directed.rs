@@ -1,8 +1,8 @@
-extern crate graph;
+extern crate graph_rs;
 
 #[test]
 fn test_directed_graph() {
-    let mut graph = graph::directed::DirectedGraph::new(3);
+    let mut graph = graph_rs::directed::DirectedGraph::new(3);
 
     assert_eq!(graph.order(), 3);
     assert_eq!(graph.size(), 0);
