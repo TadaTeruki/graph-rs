@@ -1,6 +1,6 @@
 # Graph
 
-A library for providing graph structures implemented as adjacency lists. It contains structures for both undirected and directed graphs.
+A simple implementation of graph structures based on adjacency lists. It contains structures for both undirected and directed graphs.
 
 ## Functions
 
@@ -46,5 +46,3 @@ println!("{}", directed_graph.has_edge(1, 0)); // Outputs: false
 println!("{}", directed_graph.outdegree(0)); // Outputs: 2
 println!("{}", directed_graph.indegree(1)); // Outputs: 1
 ```
-
-The library is made to be as simple and straightforward as possible, allowing users to focus on using the graph structures rather than being bogged down with complex setup or configuration.
