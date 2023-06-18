@@ -1,8 +1,8 @@
-extern crate graph_rs;
+extern crate terrain_graph;
 
 #[test]
 fn test_undirected_graph() {
-    let mut graph = graph_rs::undirected::UndirectedGraph::new(3);
+    let mut graph = terrain_graph::undirected::UndirectedGraph::new(3);
 
     assert_eq!(graph.order(), 3);
     assert_eq!(graph.size(), 0);
