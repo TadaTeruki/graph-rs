@@ -1,4 +1,4 @@
-/// A struct for representing an undirected graph.
+/// An undirected graph.
 pub struct UndirectedGraph {
     adjacency_list: Vec<Vec<usize>>,
     edge_count: usize,

@@ -1,4 +1,4 @@
-/// A struct for representing a directed graph.
+/// A directed graph.
 pub struct DirectedGraph {
     adjacency_list: Vec<Vec<usize>>,
     edge_count: usize,

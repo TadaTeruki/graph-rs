@@ -2,3 +2,4 @@
 
 pub mod directed;
 pub mod undirected;
+pub mod edge_attributed_undirected;
