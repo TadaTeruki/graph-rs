@@ -1,28 +1,12 @@
 # Graph
 
-A simple implementation of graph structures based on adjacency lists. It contains structures for both undirected and directed graphs.
+A simple implementation of graph structures based on adjacency lists.
 
-## Functions
-
-### For Both `UndirectedGraph` and `DirectedGraph`
-
-- `new(order: usize) -> Self`: Initializes a new graph with `order` vertices.
-- `add_edge(v: usize, w: usize)`: Adds an edge between vertices `v` and `w`.
-- `delete_edge(v: usize, w: usize)`: Deletes the edge between vertices `v` and `w`.
-- `has_edge(v: usize, w: usize) -> bool`: Returns `true` if there is an edge between vertices `v` and `w`, `false` otherwise.
-- `order() -> usize`: Returns the number of vertices in the graph.
-- `neighbors_of(v: usize) -> &Vec<usize>`: Returns a reference to a vector of vertices adjacent to vertex `v`.
-- `size() -> usize`: Returns the number of edges in the graph.
-- `clear()`: Removes all edges from the graph.
-
-### For `UndirectedGraph` Only
-
-- `degree(v: usize) -> usize`: Returns the degree (the number of edges connected to) of vertex `v`.
-
-### For `DirectedGraph` Only
-
-- `outdegree(v: usize) -> usize`: Returns the out-degree (the number of edges going out from) of vertex `v`.
-- `indegree(v: usize) -> usize`: Returns the in-degree (the number of edges coming into) of vertex `v`.
+This library contains the following structures:
+ - `DirectedGraph`
+ - `UndirectedGraph`
+ - `EdgeAttributedDirectedGraph`: 
+ - `EdgeAttributedUndirectedGraph`: 
 
 ## Usage
 
