@@ -42,6 +42,27 @@ fn test_clear() {
 }
 
 #[test]
+fn test_neighbors_of() {
+    let mut g: EdgeAttributedUndirectedGraph<i32> = EdgeAttributedUndirectedGraph::new(3);
+    g.add_edge(0, 1, 10);
+    g.add_edge(0, 2, 20);
+    let neighbors_0 = g.neighbors_of(0);
+    assert_eq!(neighbors_0.len(), 2);
+    assert_eq!(neighbors_0[0].0, 1);
+    assert_eq!(neighbors_0[0].1, 10);
+    assert_eq!(neighbors_0[1].0, 2);
+    assert_eq!(neighbors_0[1].1, 20);
+    let neighbors_1 = g.neighbors_of(1);
+    assert_eq!(neighbors_1.len(), 1);
+    assert_eq!(neighbors_1[0].0, 0);
+    assert_eq!(neighbors_1[0].1, 10);
+    let neighbors_2 = g.neighbors_of(2);
+    assert_eq!(neighbors_2.len(), 1);
+    assert_eq!(neighbors_2[0].0, 0);
+    assert_eq!(neighbors_2[0].1, 20);
+}
+
+#[test]
 fn test_degree() {
     let mut g: EdgeAttributedUndirectedGraph<i32> = EdgeAttributedUndirectedGraph::new(3);
     g.add_edge(0, 1, 10);
