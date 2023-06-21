@@ -5,8 +5,8 @@ A simple implementation of graph structures based on adjacency lists.
 This library contains the following structures:
  - `DirectedGraph`
  - `UndirectedGraph`
- - `EdgeAttributedDirectedGraph`: 
- - `EdgeAttributedUndirectedGraph`: 
+ - `EdgeAttributedDirectedGraph`
+ - `EdgeAttributedUndirectedGraph`
 
 ## Usage
 
