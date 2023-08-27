@@ -1,10 +1,10 @@
 /// An edge-attributed directed graph.
-pub struct EdgeAttributedDirectedGraph<Attr: Copy + Clone> {
+pub struct EdgeAttributedDirectedGraph<Attr: Copy + Clone + Default> {
     adjacency_list: Vec<Vec<(usize, Attr)>>,
     edge_count: usize,
 }
 
-impl<Attr: Copy + Clone> EdgeAttributedDirectedGraph<Attr> {
+impl<Attr: Copy + Clone + Default> EdgeAttributedDirectedGraph<Attr> {
     /// Initialize an empty graph with order vertices.
     pub fn new(order: usize) -> Self {
         EdgeAttributedDirectedGraph {
@@ -26,13 +26,13 @@ impl<Attr: Copy + Clone> EdgeAttributedDirectedGraph<Attr> {
     }
 
     /// Check if there is an edge from vertex v to vertex w.
-    pub fn has_edge(&self, v: usize, w: usize) -> (bool, Option<Attr>) {
+    pub fn has_edge(&self, v: usize, w: usize) -> (bool, Attr) {
         for &(x, attr) in self.adjacency_list[v].iter() {
             if x == w {
-                return (true, Some(attr));
+                return (true, attr);
             }
         }
-        (false, None)
+        (false, Default::default())
     }
 
     /// Return the number of vertices in the graph.

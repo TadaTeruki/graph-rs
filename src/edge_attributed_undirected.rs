@@ -1,10 +1,10 @@
 /// An edge-attributed undirected graph.
-pub struct EdgeAttributedUndirectedGraph<Attr: Copy + Clone> {
+pub struct EdgeAttributedUndirectedGraph<Attr: Copy + Clone + Default> {
     adjacency_list: Vec<Vec<(usize, Attr)>>,
     edge_count: usize,
 }
 
-impl<Attr: Copy + Clone> EdgeAttributedUndirectedGraph<Attr> {
+impl<Attr: Copy + Clone + Default> EdgeAttributedUndirectedGraph<Attr> {
     /// Initialize an empty graph with order vertices.
     pub fn new(order: usize) -> Self {
         EdgeAttributedUndirectedGraph {
@@ -28,13 +28,13 @@ impl<Attr: Copy + Clone> EdgeAttributedUndirectedGraph<Attr> {
     }
 
     /// Check if there is an edge between vertices v and w.
-    pub fn has_edge(&self, v: usize, w: usize) -> (bool, Option<Attr>) {
+    pub fn has_edge(&self, v: usize, w: usize) -> (bool, Attr) {
         for &(x, attr) in self.adjacency_list[v].iter() {
             if x == w {
-                return (true, Some(attr));
+                return (true, attr);
             }
         }
-        (false, None)
+        (false, Default::default())
     }
 
     /// Return the number of vertices in the graph.
