@@ -1,6 +1,8 @@
-# Graph
+# terrain-graph
 
-A simple implementation of graph structures based on adjacency lists.
+A simple graph library for Rust based on adjacency lists.
+
+This is a subproject for the [terrain-rs](https://github.com/TadaTeruki/terrain-rs).
 
 This library contains the following structures:
  - `DirectedGraph`
@@ -9,6 +11,11 @@ This library contains the following structures:
  - `EdgeAttributedUndirectedGraph`
 
 ## Usage
+
+```Cargo.toml
+[dependencies]
+terrain-graph = "1.0"
+```
 
 This is a basic example of how to use the `UndirectedGraph` and `DirectedGraph`:
 

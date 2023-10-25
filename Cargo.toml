@@ -1,7 +1,10 @@
 [package]
-name = "terrain_graph"
-version = "0.2.0"
+name = "terrain-graph"
+version = "1.0.0"
 edition = "2021"
+license = "MIT"
+description = "A Simple Graph Library for Rust"
+authors = ["Teruki TADA <tadateruki.public@gmail.com>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
