@@ -2,7 +2,7 @@
 
 A simple graph library for Rust based on adjacency lists.
 
-This is a subproject for the [terrain-rs](https://github.com/TadaTeruki/terrain-rs).
+This is a subproject for the [fastlem](https://github.com/TadaTeruki/fastlem).
 
 This library contains the following structures:
  - `DirectedGraph`
@@ -14,7 +14,7 @@ This library contains the following structures:
 
 ```Cargo.toml
 [dependencies]
-terrain-graph = "1.0"
+terrain-graph = "1.0.1"
 ```
 
 This is a basic example of how to use the `UndirectedGraph` and `DirectedGraph`:
