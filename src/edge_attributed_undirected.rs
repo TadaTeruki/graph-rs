@@ -1,4 +1,5 @@
 /// An edge-attributed undirected graph.
+#[derive(Clone)]
 pub struct EdgeAttributedUndirectedGraph<Attr: Copy + Clone + Default> {
     adjacency_list: Vec<Vec<(usize, Attr)>>,
     edge_count: usize,

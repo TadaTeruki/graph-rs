@@ -1,4 +1,5 @@
 /// An undirected graph.
+#[derive(Clone)]
 pub struct UndirectedGraph {
     adjacency_list: Vec<Vec<usize>>,
     edge_count: usize,
